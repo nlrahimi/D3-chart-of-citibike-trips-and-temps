@@ -26,8 +26,11 @@ a1$year <- NULL
 a1$month <- NULL
 a1$day <- NULL
 
+allTrips <- sum(a1$trips)
+allMiles <- sum(a1$Miles.traveled.today..midnight.to.11.59.pm.)
+avgMilesPerTrip <- allMiles/allTrips
 
-data.matrix(a1, rownames.force = NA)
+  data.matrix(a1, rownames.force = NA)
 # correlations
 chisq.test(abs(a1))
 cor(a1)
